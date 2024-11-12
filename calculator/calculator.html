@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex items-center justify-center h-screen bg-gray-100 ">
+    <div class="h-[500px] bg-gray-800 p-6 rounded-lg shadow-lg ">
+        <h1 class="text-3xl text-white text-center mb-4">Calculator</h1>
+        <div class="flex flex-col items-center gap-7">
+            <input id="input" type="text" class="w-64 h-16 text-2xl text-right px-4 mb-4 rounded-lg border-2 border-black-400" placeholder="0" readonly>
+            <div class="grid grid-cols-4 gap-5">
+                <button class="w-20 h-10 text-center bg-white rounded-lg" id="1">1</button>
+                <button class="w-20 h-10 text-center bg-white rounded-lg" id="2">2</button>
+                <button class="w-20 h-10 text-center bg-white rounded-lg" id="3">3</button>
+                <button class="w-20 h-10 text-center bg-white rounded-lg" id="+">+</button>
+
+                <button class="w-20 h-10 text-center bg-white rounded-lg" id="4">4</button>
+                <button class="w-20 h-10 text-center bg-white rounded-lg" id="5">5</button>
+                <button class="w-20 h-10 text-center bg-white rounded-lg" id="6">6</button>
+                <button class="w-20 h-10 text-center bg-white rounded-lg" id="-">-</button>
+
+                <button class="w-20 h-10 text-center bg-white rounded-lg" id="7">7</button>
+                <button class="w-20 h-10 text-center bg-white rounded-lg" id="8">8</button>
+                <button class="w-20 h-10 text-center bg-white rounded-lg" id="9">9</button>
+                <button class="w-20 h-10 text-center bg-white rounded-lg" id="*">*</button>
+
+                <button class="w-20 h-10 text-center bg-white rounded-lg" id="clear">C</button>
+                <button class="w-20 h-10 text-center bg-white rounded-lg" id="0">0</button>
+                <button class="w-20 h-10 text-center bg-white rounded-lg" id="equals">=</button>
+                <button class="w-20 h-10 text-center bg-white rounded-lg" id="/">/</button>
+            </div>
+        </div>
+    </div>
+    <script src="calscript.js"></script>
+</body>

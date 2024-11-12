@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class=" flex items-center justify-center  h-screen bg-zinc-300">
+    <div class="flex  items-center flex-col gap-y-5  border border-slate-950 rounded-md p-8 h-[80%] w-[50%]">
+        <h1 class="font-bold text-3xl mb-5 relative mt-[-8px] underline underline-offset-8">Shopping Cart</h1>
+        <div class="font-semibold gap-y-5 ">
+            <h3>Product</h3>
+            <input class="p-1 rounded-md" type="text "placeholder="enter the product name" id="prd" required>
+            <h3>Quantity</h3>
+            <input class="p-1 rounded-md" type="text" placeholder="enter the Quantity" id="qty" required>
+            <h3>Price</h3>
+            <input class="p-1 rounded-md" type="text" placeholder="enter the Price" id="pri" required>
+            <h3>Total Amount</h3>
+            <input class="p-1 rounded-md" type="text" readonly onfocus="findAmount()" id="totalamt" >
+        </div>
+        <button class=" bg-black text-white w-[50px] rounded-md " onclick="printdetails()" >ADD</button>
+        <div>  
+            <table class="table-auto mt-16">
+                <thead>
+                    <tr>
+                        <th class="px-4">Product name</th>
+                        <th class="px-4">Quantity</th>
+                        <th class="px-4">Price</th>
+                        <th class="px-4">Total Amount</th>
+                    </tr>
+                </thead>
+                <tbody id="cart">
+                   
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+    
+
+
+    
+    <script>
+        const findAmount = () =>{
+            const qty =parseInt(document.getElementById("qty").value);
+            const pri =parseInt(document.getElementById("pri").value);
+            const amount=document.getElementById("totalamt");
+            let result=qty*pri;
+            amount.value=result;
+        }
+        
+        const printdetails = () =>{
+            const prd = document.getElementById("prd").value;
+            const qty = document.getElementById("qty").value;
+            const pri = document.getElementById("pri").value;
+            const totalamt = document.getElementById("totalamt").value;
+            const cart = [];
+            const product={
+                productName: prd,
+                quantity:qty,
+                price:pri,
+                totalAmount:totalamt
+            }
+            cart.push(product);
+
+
+        }
+    </script>
+
+</body>
+</html>
